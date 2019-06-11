@@ -21,7 +21,7 @@ namespace HiBlogs.EntityFramework.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!string.IsNullOrWhiteSpace(connection))
-                optionsBuilder.UseMySql(connection);
+                optionsBuilder.UseSqlServer(connection);
 
         }
 

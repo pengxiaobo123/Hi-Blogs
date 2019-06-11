@@ -17,6 +17,11 @@ namespace HiBlogs.Definitions.Config
         public static string MySqlConnection { get; } = ConfigurationManager.Configuration.GetConnectionString("MySqlConnection");
 
         /// <summary>
+        /// MSsql 数据库连接
+        /// </summary>
+        public static string MsSqlConnection { get; } = ConfigurationManager.Configuration.GetConnectionString("MsSqlConnection");
+
+        /// <summary>
         /// redis 连接
         /// </summary>
         public static string RedisConnection { get; } = ConfigurationManager.GetSection("RedisConnection");

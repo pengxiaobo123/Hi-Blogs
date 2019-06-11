@@ -74,7 +74,7 @@ namespace HiBlogs.Web
             //Mvc
             services.AddMvc();
             //数据库连接
-            services.AddDbContext<HiBlogsDbContext>(options => options.UseMySql(AppConfig.MySqlConnection));
+            services.AddDbContext<HiBlogsDbContext>(options => options.UseSqlServer(AppConfig.MsSqlConnection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -97,6 +97,8 @@ namespace HiBlogs.Web
             app.UseAuthentication();
             app.UseSession();
             RouteConfig(app);
+
+            InitDBData();
         }
 
         #region 自定义设置
@@ -241,8 +243,9 @@ namespace HiBlogs.Web
         /// </summary>
         public void InitDBData()
         {
-            using (HiBlogsDbContext _dbContext = new HiBlogsDbContext(AppConfig.MySqlConnection))
+            using (HiBlogsDbContext _dbContext = new HiBlogsDbContext(AppConfig.MsSqlConnection))
             {
+                _dbContext.Database.EnsureCreated();
                 if (!_dbContext.Roles.Any())
                 {
                     var roleAdmin = new Role { Name = "Administrator" };
