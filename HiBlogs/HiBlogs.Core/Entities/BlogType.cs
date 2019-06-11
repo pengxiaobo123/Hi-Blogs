@@ -23,13 +23,13 @@ namespace HiBlogs.Core.Entities
         /// <summary>
         /// 属于这个用户的类型
         /// </summary>
-        [ForeignKey("CreatorUserId")]
+     
         public virtual User User { get; set; }
 
         /// <summary>
         /// 关联的博客
         /// </summary>
-        [ForeignKey("TypeId")]
+  
         public virtual ICollection<BlogBlogType> BlogBlogTypes { get; set; }
     }
 }

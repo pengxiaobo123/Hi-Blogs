@@ -14,7 +14,7 @@ namespace HiBlogs.Core.Entities
         /// <summary>
         /// 权限
         /// </summary>
-        [ForeignKey("RoleId")]
+   
         public virtual ICollection<RolePermissionName> RolePermissionNames { get; set; }
     }
 }

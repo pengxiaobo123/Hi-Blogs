@@ -14,9 +14,9 @@ namespace HiBlogs.Core.Entities
         public int BlogId { get; set; }
         public int TypeId { get; set; }
 
-        [ForeignKey("BlogId")]
+
         public virtual Blog Blog { get; set; }
-        [ForeignKey("TypeId")]
+     
 
         public virtual BlogType BlogType { get; set; }
     }

@@ -25,13 +25,13 @@ namespace HiBlogs.Core.Entities
         /// <summary>
         /// 属于这个用户的标签
         /// </summary>
-        [ForeignKey("UserId")]
+   
         public virtual User User { get; set; }
 
         /// <summary>
         /// 关联的博客
         /// </summary>
-        [ForeignKey("TagId")]
+    
         public virtual ICollection<BlogBlogTag> BlogBlogTags { get; set; }
 
     }

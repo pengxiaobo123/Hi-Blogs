@@ -62,25 +62,25 @@ namespace HiBlogs.Core.Entities
         /// <summary>
         /// 博客标签
         /// </summary>       
-        [ForeignKey("BlogId")]
+     
         public virtual ICollection<BlogBlogTag> BlogBlogTags { get; set; }
 
         /// <summary>
         /// 博客标签
         /// </summary> 
-        [ForeignKey("BlogId")]
+      
         public virtual ICollection<BlogBlogType> BlogBlogTypes { get; set; }
 
         /// <summary>
         /// 博客评论
         /// </summary>      
-        [ForeignKey("BlogId")]
+      
         public virtual ICollection<Remark> Remarks { get; set; }
 
         /// <summary>
         /// 用户
         /// </summary>
-        [ForeignKey("UserId")]
+      
         public virtual User User { get; set; }
     }
 }

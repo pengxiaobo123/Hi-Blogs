@@ -11,7 +11,7 @@ namespace HiBlogs.Core.Entities
     {
         public int RoleId { get; set; }
 
-        [ForeignKey("RoleId")]
+   
         public virtual Role Role { get; set; }
 
         /// <summary>

@@ -32,14 +32,13 @@ namespace HiBlogs.Core.Entities
         public string IP { get; set; }
 
 
-        [ForeignKey("RemarkId")]
 
         public virtual Remark Remark { get; set; }
 
         /// <summary>
         /// 回复给的用户
         /// </summary>
-        [ForeignKey("ReplyToUserId")]
+  
 
         public virtual User ReplyToUser { get; set; }
     }

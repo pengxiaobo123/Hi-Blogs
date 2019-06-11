@@ -360,7 +360,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                       
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -368,12 +368,12 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.Blog", "Blog")
                         .WithMany("BlogBlogTags")
-                        .HasForeignKey("BlogId")
+                  
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("HiBlogs.Core.Entities.BlogTag", "BlogTag")
                         .WithMany("BlogBlogTags")
-                        .HasForeignKey("TagId")
+                   
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -381,12 +381,12 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.Blog", "Blog")
                         .WithMany("BlogBlogTypes")
-                        .HasForeignKey("BlogId")
+                      
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("HiBlogs.Core.Entities.BlogType", "BlogType")
                         .WithMany("BlogBlogTypes")
-                        .HasForeignKey("TypeId")
+                       
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -394,7 +394,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                       
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -402,7 +402,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("CreatorUserId")
+                        
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -410,7 +410,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.Blog", "Blog")
                         .WithMany("Remarks")
-                        .HasForeignKey("BlogId")
+                    
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -418,7 +418,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.Role", "Role")
                         .WithMany("RolePermissionNames")
-                        .HasForeignKey("RoleId")
+                    
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -426,7 +426,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.Role")
                         .WithMany()
-                        .HasForeignKey("RoleId")
+                 
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -434,7 +434,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                       
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -442,7 +442,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                      
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -450,12 +450,12 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.Role")
                         .WithMany()
-                        .HasForeignKey("RoleId")
+                       
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("HiBlogs.Core.Entities.User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                       
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -463,7 +463,7 @@ namespace HiBlogs.EntityFramework.Migrations
                 {
                     b.HasOne("HiBlogs.Core.Entities.User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                       
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

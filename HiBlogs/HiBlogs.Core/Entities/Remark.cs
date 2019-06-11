@@ -31,7 +31,7 @@ namespace HiBlogs.Core.Entities
         /// </summary>
         public int BlogId { get; set; }
 
-        [ForeignKey("BlogId")]
+       
         /// <summary>
         /// 博客
         /// </summary>
